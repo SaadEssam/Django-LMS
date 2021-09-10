@@ -5,5 +5,9 @@ from django.shortcuts import render
 
 
 
-def demo(request):
+def index(request):
+    return render(request, 'pages/index.html')
+
+
+def books(request):
     return render(request, 'pages/books.html')
