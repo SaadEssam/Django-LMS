@@ -13,9 +13,9 @@ class Category(models.Model):
 class Book(models.Model):
 
     status_book = [
-        ('available','available'),
-        ('rental','rental'),
-        ('sold','sold'),
+        ('متاح','متاح'),
+        ('مستأجر','مستأجر'),
+        ('مباع','مباع'),
     ]
 
 
