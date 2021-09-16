@@ -91,12 +91,7 @@
                     <!-- form start -->
                     <form method="POST" enctype="multipart/form-data">
                         <div class="card-body">
-                            <input type="text" class="form-control">
-                            <input type="text" class="form-control">
-                            <input type="text" class="form-control">
-                            <input type="text" class="form-control">
-                            <input type="text" class="form-control">
-                            <small id='totalrente' class="form-text text-muted"></small>
+                            {{form}}
                         </div>
                         <!-- /.card-body -->
                         <div class="card-footer">
@@ -146,7 +141,7 @@
                                 </div>
                             </div>
 
-                            <div class="widget-user-header bg-light">
+                            <div class="widget-user-header bg-secondary">
                                 <h3 class="widget-user-username">{{book.title}}</h3>
                                 <h5 class="widget-user-desc">{{book.author}}</h5>
                             </div>
