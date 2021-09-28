@@ -40,6 +40,39 @@
                         <!-- /.card -->
                     </div>
                     <!-- /.col-md-6 -->
+                <!--الارباح-->
+                {% for book in books %}
+                    {% if book.price != None %}
+                    {% if book.status == 'مباع' %}
+                        <p class="totalprice">{{book.price}}</p>
+                    {% endif %}
+                    {% endif %}
+                    {% if book.total_rental != None %}
+                    {% if book.status == 'مستأجر' %}
+                        <p class="totalprice">{{book.total_rental}}</p>
+                    {% endif %}
+                    {% endif %}
+                {% endfor %}
+
+                <!--الكتب المستأجره-->
+                {% for book in books %}
+                {% if book.status == 'مستأجر' %}
+                {% if book.total_rental != None %}
+                <p class="totalrental">{{book.total_rental}}</p>
+                {% endif %}
+                {% endif %}
+                {% endfor %}
+                <p class="salaryrental"></p>
+
+                <!--الكتب المباعه-->
+                {% for book in books %}
+                {% if book.status == 'مباع' %}
+                {% if book.price != None %}
+                <p class="totalsold">{{book.price}}</p>
+                {% endif %}
+                {% endif %}
+                {% endfor %}
+                <p class="salarysold"></p>
 
                     <div class="col-lg-6">
                         <div class="card">
@@ -51,7 +84,7 @@
                             <div class="card-body">
                                 <div class="d-flex">
                                     <p class="d-flex flex-column">
-                                        <span id="totalsalarys" class="text-bold text-lg">$250</span><br>
+                                        <span id="totalsalarys" class="text-bold text-lg">$</span><br>
                                     </p>
                                 </div>
                                 <!-- /.d-flex -->
@@ -66,7 +99,7 @@
                                         <p id="soldtotals"></p>
                                     </span>
                                     <span>
-                                        <i class="fas fa-square text-gray"></i> الارباح من استعارة الكتب
+                                        <i class="fas fa-square text-gray"></i> الارباح من تأجير الكتب
                                         <p id="rentedtotals"></p>
                                     </span>
                                 </div>
