@@ -27,7 +27,7 @@
                     <div class="row d-flex align-items-stretch">
                     {% for book in books %}
                         <!-- بداية الكتاب -->
-                        <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch ">
+                        <div class="col-12 col-sm-6 col-md-4 bookhide book{{book.category.id}} book{{book.status}}">
                             <div id="" class="card bg-light">
                                 <div class="card-header text-muted border-bottom-0">
                                     {{book.category}}
